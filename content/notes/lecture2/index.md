@@ -2,11 +2,10 @@
 title = 'Lecture 2: Probability Redux'
 date = 2024-09-17T00:24:28+08:00
 draft = false
+math = true
 +++
 
-# Lecture 2: Probability Redux
-
-{{< video label="Two important probability tools" mp4="videos/2. Two important probability tools.mp4" >}}
+{{< video src="2. Two important probability tools" >}}
 
 ## SAT
 
@@ -14,7 +13,7 @@ Up until 2015, the SAT had a "guessing penalty". Consider an exam with 40 questi
 
 1. What is your expected score for the first question?
 
-[Hint: First write your score for this question as $aX+b$ where $X \sim \text {Ber}(p)$ for some numbers $a,b$ and $p$ to be determined.]
+[Hint: First write your score for this question as $aX+b$ where `$X \sim \text {Ber}(p)$` for some numbers `$a,b$` and $p$ to be determined.]
 
 2. What is the standard deviation of your total score on the exam?
 
@@ -31,25 +30,25 @@ Suppose that $ X_1, \ldots, X_n $ are i.i.d. with mean $\mu$ and variance $\sigm
 
 **Options:**
 
-1. $\frac{\bar{X}_n - \mu}{\sigma} \to N \left( 0, \frac{\sigma^2}{n} \right)$
+1. `$\frac{\bar{X}_n - \mu}{\sigma} \to N \left( 0, \frac{\sigma^2}{n} \right)$`
 
-2. $\sqrt{n} \left( \frac{\bar{X}_n - \mu}{\sigma} \right) \to N(0, 1)$
+2. `$\sqrt{n} \left( \frac{\bar{X}_n - \mu}{\sigma} \right) \to N(0, 1)$`
 
-3. $\frac{1}{\sqrt{n}} \sum_{i=1}^{n} (X_i - \mu) \to N(\mu, \sigma)$
+3. `$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} (X_i - \mu) \to N(\mu, \sigma)$`
 
-4. $\frac{\bar{X}_n - \mu}{\sigma} \to N \left(0, \frac{1}{\sqrt{n}} \right)$
+4. `$\frac{\bar{X}_n - \mu}{\sigma} \to N \left(0, \frac{1}{\sqrt{n}} \right)$`
 
-5. $\sqrt{n} (\bar{X}_n - \mu) \to N(0, \sigma^2)$
+5. `$\sqrt{n} (\bar{X}_n - \mu) \to N(0, \sigma^2)$`
 
-6. $\frac{1}{\sqrt{n}} \sum_{i=1}^{n} (X_i - \mu) \to N(0, \sigma^2)$
+6. `$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} (X_i - \mu) \to N(0, \sigma^2)$`
 
-7. $\frac{1}{\sqrt{n}} \sum_{i=1}^{n} \left(\frac{X_i - \mu}{\sigma}\right) \to N(0, 1)$
+7. `$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} \left(\frac{X_i - \mu}{\sigma}\right) \to N(0, 1)$`
 
-8. $\frac{1}{\sqrt{n}} \sum_{i=1}^{n} X_i \to N(\mu, \sigma^2)$
+8. `$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} X_i \to N(\mu, \sigma^2)$`
 
-9. $\frac{\left(\sum_{i=1}^{n} X_i\right) - n \mu}{\sigma \sqrt{n}} \to N(0, 1)$
+9. `$\frac{\left(\sum_{i=1}^{n} X_i\right) - n \mu}{\sigma \sqrt{n}} \to N(0, 1)$`
 
-10. $\frac{\bar{X}_n - \mu}{\sigma} \to N \left(0, \frac{1}{n} \right)$
+10. `$\frac{\bar{X}_n - \mu}{\sigma} \to N \left(0, \frac{1}{n} \right)$`
 
 ---
 
