@@ -5,7 +5,9 @@ draft = false
 math = true
 +++
 
-{{< video src="2. Two important probability tools" >}}
+# Two important probability tools
+
+{{< video src="2. Two important probability tools.mp4" controls="yes" >}}
 
 ## SAT
 
