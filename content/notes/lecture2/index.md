@@ -5,11 +5,11 @@ draft = false
 math = true
 +++
 
-# Two important probability tools
+## Two important probability tools
 
 {{< youtube 0XDbzLlu5r4 >}}
 
-## SAT
+### SAT
 
 Up until 2015, the SAT had a "guessing penalty". Consider an exam with 40 questions each with six possible choices. Only one is correct. Each correct answer is worth +20 points and each incorrect one is worth -5 points. Consider answering each question by rolling a six-sided die for each question and simply choosing the corresponding answer.
 
@@ -26,7 +26,7 @@ Up until 2015, the SAT had a "guessing penalty". Consider an exam with 40 questi
 ![SAT](img/SAT.png)
 
 
-## Formulations of CLT
+### Formulations of CLT
 
 Suppose that $ X_1, \ldots, X_n $ are i.i.d. with mean $\mu$ and variance $\sigma^2$. Which of the following are equivalent statements of the central limit theorem seen in class? (Choose all that apply.)
 
@@ -58,3 +58,6 @@ Solution:
 
 All of the answers with  on the right-hand-side (RHS) are incorrect because the limit on the left is taken as $n\rightarrow \infty$. Also the asymptotic variance from the CLT is $\sigma^2$ and not $\sigma$, so the third response is wrong. The eighth answer is wrong as can be seen by calculating the expectation of the left-hand-side and comparing with the right-hand-side mean $\mu$. The remaining answers are correct, as can be seen by algebraic manipulations applied to the CLT stated in class.
 
+## 3. (Optional) Hoeffding's Inequality
+
+{{< video label="3. (Optional) Hoeffding's Inequality" mp4="videos/3. (Optional) Hoeffding's Inequality.mp4" >}}
