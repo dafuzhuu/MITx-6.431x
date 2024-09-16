@@ -15,7 +15,7 @@ Up until 2015, the SAT had a "guessing penalty". Consider an exam with 40 questi
 
 1. What is your expected score for the first question?
 
-[Hint: First write your score for this question as $aX+b$ where `$X \sim \text {Ber}(p)$` for some numbers `$a,b$` and $p$ to be determined.]
+[Hint: First write your score for this question as `$aX+b$` where `$X \sim \text {Ber}(p)$` for some numbers `$a,b$` and `$p$` to be determined.]
 
 2. What is the standard deviation of your total score on the exam?
 
