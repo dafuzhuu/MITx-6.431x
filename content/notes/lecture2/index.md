@@ -73,7 +73,7 @@ All of the answers with  on the right-hand-side (RHS) are incorrect because the 
 
 ## Gaussian Probability Tables and Quantiles
 
-{{< youtube rKylZD7oML4 >>}}
+{{< youtube rKylZD7oML4 >}}
 
 ## Modes of Convergence
 
