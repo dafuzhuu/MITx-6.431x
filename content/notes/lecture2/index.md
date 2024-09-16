@@ -7,7 +7,7 @@ math = true
 
 # Two important probability tools
 
-{{< video src="videos/2. Two important probability tools.mp4" controls="yes" >}}
+{{< youtube 0XDbzLlu5r4 >}}
 
 ## SAT
 
