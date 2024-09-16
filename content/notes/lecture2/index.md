@@ -28,7 +28,7 @@ Up until 2015, the SAT had a "guessing penalty". Consider an exam with 40 questi
 
 ### Formulations of CLT
 
-Suppose that $ X_1, \ldots, X_n $ are i.i.d. with mean $\mu$ and variance $\sigma^2$. Which of the following are equivalent statements of the central limit theorem seen in class? (Choose all that apply.)
+Suppose that `$ X_1, \ldots, X_n $` are i.i.d. with mean `$\mu$` and variance `$\sigma^2$`. Which of the following are equivalent statements of the central limit theorem seen in class? (Choose all that apply.)
 
 **Options:**
 
@@ -56,8 +56,29 @@ Suppose that $ X_1, \ldots, X_n $ are i.i.d. with mean $\mu$ and variance $\sigm
 
 Solution:
 
-All of the answers with  on the right-hand-side (RHS) are incorrect because the limit on the left is taken as $n\rightarrow \infty$. Also the asymptotic variance from the CLT is $\sigma^2$ and not $\sigma$, so the third response is wrong. The eighth answer is wrong as can be seen by calculating the expectation of the left-hand-side and comparing with the right-hand-side mean $\mu$. The remaining answers are correct, as can be seen by algebraic manipulations applied to the CLT stated in class.
+All of the answers with  on the right-hand-side (RHS) are incorrect because the limit on the left is taken as `$n\rightarrow \infty$`. Also the asymptotic variance from the CLT is `$\sigma^2$` and not `$\sigma$`, so the third response is wrong. The eighth answer is wrong as can be seen by calculating the expectation of the left-hand-side and comparing with the right-hand-side mean `$\mu$`. The remaining answers are correct, as can be seen by algebraic manipulations applied to the CLT stated in class.
 
-## 3. (Optional) Hoeffding's Inequality
+## (Optional) Hoeffding's Inequality
 
-{{< video label="3. (Optional) Hoeffding's Inequality" mp4="videos/3. (Optional) Hoeffding's Inequality.mp4" >}}
+{{< youtube l0KMLN7suaw >}}
+
+
+## Gaussian distribution
+
+{{< youtube JU_MvSyjQdA >}}
+
+## Properties of the Gaussian distribution
+
+{{< youtube lvQV5iXycQg >}}
+
+## Gaussian Probability Tables and Quantiles
+
+{{< youtube rKylZD7oML4 >>}}
+
+## Modes of Convergence
+
+{{< youtube d5qE2Kc2GTM >}}
+
+## Operations on Sequences and Convergence
+
+{{< youtube khbDvKTNQe8 >}}
