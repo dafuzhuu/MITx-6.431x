@@ -9,11 +9,11 @@
     <lastBuildDate>Tue, 17 Sep 2024 19:48:14 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lecture3</title>
+      <title>Lecture 3: Parametric Statistical Models</title>
       <link>http://localhost:1313/notes/lecture3/</link>
       <pubDate>Tue, 17 Sep 2024 19:48:14 +0800</pubDate>
       <guid>http://localhost:1313/notes/lecture3/</guid>
-      <description></description>
+      <description>The goals of statistics Statistical modelling Statistical model Types of Statistical Models Examples of Parametric Models Mixtures of Gaussians Another representation of mixtures of Gaussians Mixtures of Gaussians model Examples of nonparametric models Identifiability </description>
     </item>
     <item>
       <title>Lecture 2: Probability Redux</title>

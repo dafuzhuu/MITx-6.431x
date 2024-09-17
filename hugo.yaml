@@ -12,4 +12,12 @@ enableEmoji: true
 pygmentsUseClasses: true
 
 params:
+  homeInfoParams:
+    Title: Fundamentals of Statistics
+    Content: This course is a mathematics course that will require major time commitment and perseverance.  MIT students who have appropriate background in mathematics spend on average 12 hours per week on this course. 
+
+  socialIcons: # optional
+    - name: "edX"
+      url: "https://courses.edx.org/courses/course-v1:MITx+18.6501x+2T2024"
+
   ShowToc: true
