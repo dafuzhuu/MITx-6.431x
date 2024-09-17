@@ -13,7 +13,10 @@
       <link>http://localhost:1313/notes/lecture3/</link>
       <pubDate>Tue, 17 Sep 2024 19:48:14 +0800</pubDate>
       <guid>http://localhost:1313/notes/lecture3/</guid>
-      <description>The goals of statistics Statistical modelling Statistical model Types of Statistical Models Examples of Parametric Models Mixtures of Gaussians Another representation of mixtures of Gaussians Mixtures of Gaussians model Examples of nonparametric models Identifiability </description>
+      <description>&lt;!DOCTYPE HTML&gt;Statistical Model for a Censored Exponential 1 point possible (graded)
+Let $ X $ denote an exponential random variable with unknown parameter $ \lambda &amp;gt; 0 $. Let $ Y = \mathbb{I}(X &amp;gt; 5) $, the indicator that $ X $ is larger than 5.
+Recall the definition of the indicator function here is:
+$$ \mathbb{I}(X &amp;gt; 5) = \begin{cases} 1 &amp;amp; \text{if } X &amp;gt; 5 \\ 0 &amp;amp; \text{if } X \leq 5.</description>
     </item>
     <item>
       <title>Lecture 2: Probability Redux</title>

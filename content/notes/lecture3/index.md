@@ -5,7 +5,7 @@ draft = false
 math = true
 +++
 
-{{< bilibili BV1af4y1K7TE 4 >}}
+{{< bilibili id="BV1af4y1K7TE" page=4 >}}
 
 ## Statistical Model for a Censored Exponential
 
