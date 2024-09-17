@@ -8,6 +8,11 @@ draft = false
 
 {{< video src="3. The goals of statistics.mp4" type="mp4">}}
 
+<video width=100% controls autoplay>
+    <source src="videos/3. The goals of statistics.mp4" type="video/mp4">
+    Your browser does not support the video tag.  
+</video>
+
 ## Statistical modelling
 
 {{< video src="4. Statistical modelling.mp4" type="mp4">}}
