@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Lecture 2: Probability Redux | MITx-18.6501x</title>
+<meta name="keywords" content="">
+<meta name="description" content="Two important probability tools SAT Up until 2015, the SAT had a &ldquo;guessing penalty&rdquo;. Consider an exam with 40 questions each with six possible choices. Only one is correct. Each correct answer is worth &#43;20 points and each incorrect one is worth -5 points. Consider answering each question by rolling a six-sided die for each question and simply choosing the corresponding answer.
+What is your expected score for the first question?">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/notes/lecture2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.54405a410796490bc874ab6181fac9b675753cc2b91375d8f882566459eca428.css" integrity="sha256-VEBaQQeWSQvIdKthgfrJtnV1PMK5E3XY&#43;IJWZFnspCg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/notes/lecture2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+
+<script defer
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="MITx-18.6501x (Alt + H)">MITx-18.6501x</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Lecture 2: Probability Redux
+    </h1>
+    <div class="post-meta"><span title='2024-09-17 00:24:28 +0800 CST'>September 17, 2024</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#two-important-probability-tools" aria-label="Two important probability tools">Two important probability tools</a><ul>
+                        
+                <li>
+                    <a href="#sat" aria-label="SAT">SAT</a></li>
+                <li>
+                    <a href="#formulations-of-clt" aria-label="Formulations of CLT">Formulations of CLT</a></li></ul>
+                </li>
+                <li>
+                    <a href="#optional-hoeffdings-inequality" aria-label="(Optional) Hoeffding&rsquo;s Inequality">(Optional) Hoeffding&rsquo;s Inequality</a></li>
+                <li>
+                    <a href="#gaussian-distribution" aria-label="Gaussian distribution">Gaussian distribution</a></li>
+                <li>
+                    <a href="#properties-of-the-gaussian-distribution" aria-label="Properties of the Gaussian distribution">Properties of the Gaussian distribution</a><ul>
+                        
+                <li>
+                    <a href="#transformation-and-symmetry" aria-label="Transformation and Symmetry">Transformation and Symmetry</a></li></ul>
+                </li>
+                <li>
+                    <a href="#gaussian-probability-tables-and-quantiles" aria-label="Gaussian Probability Tables and Quantiles">Gaussian Probability Tables and Quantiles</a></li>
+                <li>
+                    <a href="#modes-of-convergence" aria-label="Modes of Convergence">Modes of Convergence</a></li>
+                <li>
+                    <a href="#operations-on-sequences-and-convergence" aria-label="Operations on Sequences and Convergence">Operations on Sequences and Convergence</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="two-important-probability-tools">Two important probability tools<a hidden class="anchor" aria-hidden="true" href="#two-important-probability-tools">#</a></h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0XDbzLlu5r4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h3 id="sat">SAT<a hidden class="anchor" aria-hidden="true" href="#sat">#</a></h3>
+<p>Up until 2015, the SAT had a &ldquo;guessing penalty&rdquo;. Consider an exam with 40 questions each with six possible choices. Only one is correct. Each correct answer is worth +20 points and each incorrect one is worth -5 points. Consider answering each question by rolling a six-sided die for each question and simply choosing the corresponding answer.</p>
+<ol>
+<li>What is your expected score for the first question?</li>
+</ol>
+<p>[Hint: First write your score for this question as <code>$aX+b$</code> where <code>$X \sim \text {Ber}(p)$</code> for some numbers <code>$a,b$</code> and <code>$p$</code> to be determined.]</p>
+<ol start="2">
+<li>
+<p>What is the standard deviation of your total score on the exam?</p>
+</li>
+<li>
+<p>What is the probability that you score more than 400 points? Use the CLT.</p>
+</li>
+<li>
+<p>What is the probability that you score more than 600 points? Use the CLT.</p>
+</li>
+</ol>
+<p><img loading="lazy" src="img/SAT.png" alt="SAT"  />
+</p>
+<h3 id="formulations-of-clt">Formulations of CLT<a hidden class="anchor" aria-hidden="true" href="#formulations-of-clt">#</a></h3>
+<p>Suppose that <code>$ X_1, \ldots, X_n $</code> are i.i.d. with mean <code>$\mu$</code> and variance <code>$\sigma^2$</code>. Which of the following are equivalent statements of the central limit theorem seen in class? (Choose all that apply.)</p>
+<p><strong>Options:</strong></p>
+<ol>
+<li>
+<p><code>$\frac{\bar{X}_n - \mu}{\sigma} \to N \left( 0, \frac{\sigma^2}{n} \right)$</code></p>
+</li>
+<li>
+<p><code>$\sqrt{n} \left( \frac{\bar{X}_n - \mu}{\sigma} \right) \to N(0, 1)$</code></p>
+</li>
+<li>
+<p><code>$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} (X_i - \mu) \to N(\mu, \sigma)$</code></p>
+</li>
+<li>
+<p><code>$\frac{\bar{X}_n - \mu}{\sigma} \to N \left(0, \frac{1}{\sqrt{n}} \right)$</code></p>
+</li>
+<li>
+<p><code>$\sqrt{n} (\bar{X}_n - \mu) \to N(0, \sigma^2)$</code></p>
+</li>
+<li>
+<p><code>$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} (X_i - \mu) \to N(0, \sigma^2)$</code></p>
+</li>
+<li>
+<p><code>$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} \left(\frac{X_i - \mu}{\sigma}\right) \to N(0, 1)$</code></p>
+</li>
+<li>
+<p><code>$\frac{1}{\sqrt{n}} \sum_{i=1}^{n} X_i \to N(\mu, \sigma^2)$</code></p>
+</li>
+<li>
+<p><code>$\frac{\left(\sum_{i=1}^{n} X_i\right) - n \mu}{\sigma \sqrt{n}} \to N(0, 1)$</code></p>
+</li>
+<li>
+<p><code>$\frac{\bar{X}_n - \mu}{\sigma} \to N \left(0, \frac{1}{n} \right)$</code></p>
+</li>
+</ol>
+<hr>
+<p>Solution:</p>
+<p>All of the answers with  on the right-hand-side (RHS) are incorrect because the limit on the left is taken as <code>$n\rightarrow \infty$</code>. Also the asymptotic variance from the CLT is <code>$\sigma^2$</code> and not <code>$\sigma$</code>, so the third response is wrong. The eighth answer is wrong as can be seen by calculating the expectation of the left-hand-side and comparing with the right-hand-side mean <code>$\mu$</code>. The remaining answers are correct, as can be seen by algebraic manipulations applied to the CLT stated in class.</p>
+<h2 id="optional-hoeffdings-inequality">(Optional) Hoeffding&rsquo;s Inequality<a hidden class="anchor" aria-hidden="true" href="#optional-hoeffdings-inequality">#</a></h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l0KMLN7suaw?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<p>Let <code>$ X_1, X_2, \ldots, X_n \sim \text{i.i.d.} \, \text{Unif}(0, b) $</code> be <code>$ n $</code> i.i.d. uniform random variables on the interval <code>$[0, b]$</code> for some positive <code>$ b $</code>.</p>
+<p>Using Hoeffding&rsquo;s inequality, which of the following can you conclude to be true? (Choose all that apply.)</p>
+<ol>
+<li>
+<p><code>$\mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq \frac{c}{n} \right) \leq 2 e^{-2c^2/b^2} \quad \text{for } n = 3$</code></p>
+</li>
+<li>
+<p><code>$\mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq \frac{c}{n} \right) \leq 2 e^{-2c^2/b^2} \quad \text{for } n = 300$</code></p>
+</li>
+<li>
+<p><code>$\mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq \frac{c}{\sqrt{n}} \right) \leq 2 e^{-2c^2/b^2} \quad \text{for } n = 5$</code></p>
+</li>
+<li>
+<p><code>$\mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq \frac{c}{\sqrt{n}} \right) \leq 2 e^{-2c^2/b^2} \quad \text{for } n = 10$</code></p>
+</li>
+<li>
+<p><code>$\mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq c \right) \leq 2 e^{-2c^2/b^2} \quad \text{for } n = 10$</code></p>
+</li>
+<li>
+<p><code>$\mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq c \right) \leq 2 e^{-2c^2/b^2} \quad \text{for } n = 10000$</code></p>
+</li>
+</ol>
+<p>Answer: 3456</p>
+<p><strong>Solution:</strong></p>
+<p>Given that the <code>$X_i$</code>&rsquo;s are uniform and hence bounded, Hoeffding&rsquo;s inequality applies, with:</p>
+<p><code>$$ \mathbb{E}[X] = \frac{b}{2}, \text{ and Hoeffding's inequality states:} $$</code></p>
+<p><code>$$ \mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq \epsilon \right) \leq 2e^{- \frac{2n \epsilon^2}{b^2}} \text{ for all } \epsilon &gt; 0. $$</code></p>
+<p>The answer choices involve different expressions for <code>$\epsilon$</code> and values of $n$. In all cases, <code>$\epsilon = \frac{c}{n^k}$</code>:</p>
+<ul>
+<li>For the first two choices: <code>$k = 1$</code></li>
+<li>For the third and fourth choices: <code>$k = \frac{1}{2}$</code></li>
+<li>For the last two choices: <code>$k = 0$</code></li>
+</ul>
+<p>Plugging <code>$\epsilon$</code> into Hoeffding&rsquo;s inequality:</p>
+<p><code>$$ \mathbb{P} \left( \left| \bar{X}_n - \frac{b}{2} \right| \geq \frac{c}{n^k} \right) \leq 2e^{- \frac{2n c^2}{b^2 n^{2k}}} = 2e^{- \frac{2c^2}{b^2} n^{1-2k}}. $$</code></p>
+<p>For <code>$2k - 1 \leq 0$</code> in the last four choices (where <code>$k \leq \frac{1}{2}$</code>), the probabilities are bounded above by <code>$2e^{- \frac{2c^2}{b^2}}$</code>.</p>
+<p><strong>Remark:</strong> Hoeffding&rsquo;s inequality holds for any positive <code>$n$</code>, even when <code>$n$</code> is small, including the extreme case <code>$n = 1$</code>.</p>
+<h2 id="gaussian-distribution">Gaussian distribution<a hidden class="anchor" aria-hidden="true" href="#gaussian-distribution">#</a></h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JU_MvSyjQdA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h2 id="properties-of-the-gaussian-distribution">Properties of the Gaussian distribution<a hidden class="anchor" aria-hidden="true" href="#properties-of-the-gaussian-distribution">#</a></h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/lvQV5iXycQg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h3 id="transformation-and-symmetry">Transformation and Symmetry<a hidden class="anchor" aria-hidden="true" href="#transformation-and-symmetry">#</a></h3>
+<p>Let <code>$ X \sim \mathcal{N}(2, 2) $</code>, i.e., <code>$ X $</code> is a Gaussian variable with mean <code>$\mu = 2$</code> and variance <code>$\sigma^2 = 2$</code>. Let <code>$ x &gt; 0 $</code>.<br>
+Write <code>$ \mathbb{P}(X \geq -x) $</code> in terms of the CDF <code>$ \Phi $</code> of the standard Gaussian variable with a positive argument. In other words, express your answer in terms of <code>$ \Phi(g(x)) $</code>, where <code>$ g(x) $</code> is a function of <code>$ x $</code> that takes only positive values for <code>$ x &gt; 0 $</code>.</p>
+<p><strong>Solution:</strong><br>
+Standardizing <code>$ X \sim \mathcal{N}(2, 2) $</code>, we have:</p>
+<p><code>$$ \frac{X - 2}{\sqrt{2}} \sim \mathcal{N}(0, 1). $$</code></p>
+<p>The probability can be rewritten as:</p>
+<p><code>$$ \mathbb{P}(X \geq -x) = \mathbb{P} \left( \frac{X - 2}{\sqrt{2}} \geq \frac{-x - 2}{\sqrt{2}} \right). $$</code></p>
+<p>Using symmetry of the normal distribution:</p>
+<p><code>$$ \mathbb{P} \left( \frac{X - 2}{\sqrt{2}} \geq \frac{-x - 2}{\sqrt{2}} \right) = \mathbb{P} \left( \frac{X - 2}{\sqrt{2}} \leq \frac{x + 2}{\sqrt{2}} \right) = \Phi \left( \frac{x + 2}{\sqrt{2}} \right). $$</code></p>
+<p>Thus, the answer is:</p>
+<p><code>$$ \mathbb{P}(X \geq -x) = \Phi \left( \frac{x + 2}{\sqrt{2}} \right). $$</code></p>
+<p><strong>Remark:</strong> The symmetry helps to transform the inequality from a negative argument to a positive argument, as required.</p>
+<h2 id="gaussian-probability-tables-and-quantiles">Gaussian Probability Tables and Quantiles<a hidden class="anchor" aria-hidden="true" href="#gaussian-probability-tables-and-quantiles">#</a></h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rKylZD7oML4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h2 id="modes-of-convergence">Modes of Convergence<a hidden class="anchor" aria-hidden="true" href="#modes-of-convergence">#</a></h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/d5qE2Kc2GTM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h2 id="operations-on-sequences-and-convergence">Operations on Sequences and Convergence<a hidden class="anchor" aria-hidden="true" href="#operations-on-sequences-and-convergence">#</a></h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/khbDvKTNQe8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">MITx-18.6501x</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

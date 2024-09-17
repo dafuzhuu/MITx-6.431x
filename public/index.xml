@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>MITx-18.6501x</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on MITx-18.6501x</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2024 19:48:14 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture3</title>
+      <link>http://localhost:1313/notes/lecture3/</link>
+      <pubDate>Tue, 17 Sep 2024 19:48:14 +0800</pubDate>
+      <guid>http://localhost:1313/notes/lecture3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 2: Probability Redux</title>
+      <link>http://localhost:1313/notes/lecture2/</link>
+      <pubDate>Tue, 17 Sep 2024 00:24:28 +0800</pubDate>
+      <guid>http://localhost:1313/notes/lecture2/</guid>
+      <description>Two important probability tools SAT Up until 2015, the SAT had a &amp;ldquo;guessing penalty&amp;rdquo;. Consider an exam with 40 questions each with six possible choices. Only one is correct. Each correct answer is worth +20 points and each incorrect one is worth -5 points. Consider answering each question by rolling a six-sided die for each question and simply choosing the corresponding answer.
+What is your expected score for the first question?</description>
+    </item>
   </channel>
 </rss>
