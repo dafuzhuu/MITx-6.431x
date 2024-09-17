@@ -13,3 +13,6 @@ pygmentsUseClasses: true
 
 params:
   ShowToc: true
+  homeInfoParams:
+    Title: Fundamentals of Statistics
+    Content: [link](https://learning.edx.org/course/course-v1:MITx+18.6501x+2T2024/home)
