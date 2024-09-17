@@ -1,7 +1,7 @@
 baseURL: https://example.org/
 languageCode: en-us
 title: MITx-18.6501x
-theme: ["PaperMod", "hugo-video"]
+theme: PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
