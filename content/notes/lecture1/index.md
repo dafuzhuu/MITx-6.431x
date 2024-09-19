@@ -5,6 +5,4 @@ draft = false
 math = true
 +++
 
-## Video
-
 {{< bilibili id="BV1LE411B7ir" page=2 >}}
