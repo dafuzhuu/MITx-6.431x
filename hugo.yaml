@@ -1,6 +1,6 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: MITx-18.6501x
+title: MITx 6.431x
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -13,11 +13,11 @@ pygmentsUseClasses: true
 
 params:
   homeInfoParams:
-    Title: Fundamentals of Statistics
-    Content: This course is a mathematics course that will require major time commitment and perseverance.  MIT students who have appropriate background in mathematics spend on average 12 hours per week on this course. 
+    Title: Introduction to Probability
+    Content: This course follows closely the text Introduction to Probability, 2nd edition, by Bertsekas and Tsitsiklis, Athena Scientific, 2008
 
   socialIcons: # optional
     - name: "edX"
-      url: "https://courses.edx.org/courses/course-v1:MITx+18.6501x+2T2024"
+      url: "https://learning.edx.org/course/course-v1:MITx+6.431x+3T2024/home"
 
   ShowToc: true
