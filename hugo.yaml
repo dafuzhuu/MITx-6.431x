@@ -17,7 +17,9 @@ params:
     Content: This course follows closely the text Introduction to Probability, 2nd edition, by Bertsekas and Tsitsiklis, Athena Scientific, 2008
 
   socialIcons: # optional
-    - name: "edX"
+    - name: "rss"
+      url: "https://dafuzhuu.github.io/blog/"
+    - name: "youtube"
       url: "https://learning.edx.org/course/course-v1:MITx+6.431x+3T2024/home"
 
   ShowToc: true
