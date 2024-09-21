@@ -21,5 +21,7 @@ params:
       url: "https://dafuzhuu.github.io/blog/"
     - name: "youtube"
       url: "https://learning.edx.org/course/course-v1:MITx+6.431x+3T2024/home"
+    - name: "cv"
+      url: "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
 
   ShowToc: true
