@@ -6,3 +6,5 @@ math = true
 +++
 
 {{< youtube B5y6fy5iUtg >}}
+
+Lec. 2: Conditioning and Bayes' rule
